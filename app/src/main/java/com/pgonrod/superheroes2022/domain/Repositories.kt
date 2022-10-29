@@ -1,6 +1,6 @@
 package com.pgonrod.superheroes2022.domain
 
-interface Repositories {
+interface SuperHeroeRepository {
     fun getSuperHeroe(): List<SuperHeroe>
 }
 

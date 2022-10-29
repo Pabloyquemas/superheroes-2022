@@ -1,27 +1,30 @@
 package com.pgonrod.superheroes2022.domain
 
+import com.pgonrod.superheroes2022.data.remote.superheroe.SuperHeroeDataRepository
+
 class GetSuperHeroeFeedUseCase (
-    val  superHeroeRepository: Repositories,
-    val biographyRepository: BiographyRepository,
-    val workRepository: WorkRepository
+    private val superHeroeRepository: SuperHeroeRepository,
+    private val biographyRepository: BiographyRepository,
+    private val workRepository: WorkRepository
     ) {
 
     fun execute(): List<SuperHeroeFeed>{
-        val superHeroes = superHeroeRepository.getSuperHeroe()
+        val superHeroes = superHeroeRepository.getSuperHeroe().subList(0, 5)
 
-        return superHeroes.map { superHeroe ->
-            val work = workRepository.getwork(superHeroe.id)
-            val biography = biographyRepository.getBiography(superHeroe.id )
+            val list = superHeroes.map { superHeroe ->
+                val work = workRepository.getwork(superHeroe.id)
+                val biography = biographyRepository.getBiography(superHeroe.id)
 
             SuperHeroeFeed(
                 superHeroe.id,
                 superHeroe.name,
                 superHeroe.getUrlImageM(),
                 work.occupation,
-                biography.realName
+                biography.fullName
             )
 
         }
+        return list
     }
 
     data class SuperHeroeFeed(
@@ -29,6 +32,6 @@ class GetSuperHeroeFeedUseCase (
         val nameSuperHeroe: String,
         val urlImage: String,
         val occupation: String,
-        val realName: String
+        val fullName: String
         )
 }

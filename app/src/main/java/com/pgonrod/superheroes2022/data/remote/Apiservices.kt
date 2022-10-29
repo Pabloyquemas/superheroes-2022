@@ -1,5 +1,7 @@
 package com.pgonrod.superheroes2022.data.remote
 
+import com.pgonrod.superheroes2022.data.remote.Work.WorkApiModel
+import com.pgonrod.superheroes2022.data.remote.biography.BiographyApiModel
 import com.pgonrod.superheroes2022.data.remote.superheroe.SuperHeroeApiModel
 import com.pgonrod.superheroes2022.domain.Biography
 import com.pgonrod.superheroes2022.domain.SuperHeroe

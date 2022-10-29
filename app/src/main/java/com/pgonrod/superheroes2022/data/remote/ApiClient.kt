@@ -1,7 +1,8 @@
 package com.pgonrod.superheroes2022.data.remote
 
 
-import com.pgonrod.superheroes2022.data.remote.biography.BiographyModel
+import com.pgonrod.superheroes2022.data.remote.Work.WorkApiModel
+import com.pgonrod.superheroes2022.data.remote.biography.BiographyApiModel
 import com.pgonrod.superheroes2022.data.remote.superheroe.SuperHeroeApiModel
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -37,7 +38,7 @@ class ApiClient {
         val call = apiServices.getBiography(superHeroeId).execute()
         return if (call.isSuccessful) {
             call.body()
-        } else {
+        }else{
             null
         }
     }

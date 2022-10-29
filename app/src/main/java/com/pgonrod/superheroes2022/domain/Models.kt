@@ -6,5 +6,5 @@ data class SuperHeroe(val id : Int, val name : String, val UrlImages: List<Strin
     fun getUrlImageL(): String = UrlImages[2]
     fun getUrlImageXL(): String = UrlImages[3]
 }
-data class Biography(val realName : String)
+data class Biography(val fullName : String)
 data class Work(val occupation : String)

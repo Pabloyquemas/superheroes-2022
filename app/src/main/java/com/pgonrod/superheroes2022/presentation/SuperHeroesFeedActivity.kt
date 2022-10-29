@@ -16,8 +16,10 @@ class SuperHeroesFeedActivity : AppCompatActivity() {
     private fun test(){
         val usecase = SuperHeroeFactory().getSuperHeroeUseCase()
         thread {
+
             val model = usecase.execute()
             Log.d("@dev", "Modelo: $model")
+
         }
     }
 }

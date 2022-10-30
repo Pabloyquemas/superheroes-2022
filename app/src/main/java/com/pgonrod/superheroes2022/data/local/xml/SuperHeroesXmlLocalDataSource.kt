@@ -1,9 +1,7 @@
 package com.pgonrod.superheroes2022.data.local.xml
 
 import android.content.SharedPreferences
-import com.pgonrod.app.commons.GsonJserializer
 import com.pgonrod.app.commons.KSerializer
-import com.pgonrod.superheroes2022.data.local.SuperHeroeLocalDataSource
 import com.pgonrod.superheroes2022.domain.SuperHeroe
 
 class SuperHeroesXmlLocalDataSource(

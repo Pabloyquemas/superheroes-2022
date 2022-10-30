@@ -34,4 +34,5 @@ class GetSuperHeroeFeedUseCase (
         val occupation: String,
         val fullName: String
         )
+
 }

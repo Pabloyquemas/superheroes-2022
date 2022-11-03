@@ -9,7 +9,7 @@ class GetSuperHeroeFeedUseCase (
     ) {
 
     fun execute(): List<SuperHeroeFeed>{
-        val superHeroes = superHeroeRepository.getSuperHeroe().subList(0, 5)
+        val superHeroes = superHeroeRepository.getSuperHeroe().subList(0, 100)
 
             val list = superHeroes.map { superHeroe ->
                 val work = workRepository.getwork(superHeroe.id)

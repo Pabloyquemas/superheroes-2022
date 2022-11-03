@@ -19,4 +19,5 @@ class SuperHeroeFactory {
             WorkDataRepository(WorkRemoteDataSource(apiclient)),
         )
     }
+    fun getSuperHeroesViewModel() = SuperHeroesViewModel(getSuperHeroeUseCase())
 }

@@ -16,7 +16,8 @@ class SuperHeroeFactory {
         return GetSuperHeroeFeedUseCase(
             SuperHeroeDataRepository(SuperHeroeRemoteDataSource(apiclient)),
             BiographyDataRepository(BiographyRemoteDataSource(apiclient)),
-            WorkDataRepository(WorkRemoteDataSource(apiclient))
+            WorkDataRepository(WorkRemoteDataSource(apiclient)),
         )
     }
+    fun getSuperHeroesViewModel() = SuperHeroesViewModel(getSuperHeroeUseCase())
 }

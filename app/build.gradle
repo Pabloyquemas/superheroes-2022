@@ -30,6 +30,9 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    viewBinding {
+        enabled = true
+    }
 }
 
 dependencies {
@@ -48,5 +51,14 @@ dependencies {
 
     //Ggon: serializador de objetos
     implementation 'com.google.code.gson:gson:2.10'
+    implementation "com.squareup.moshi:moshi:1.14.0"
+    implementation "com.squareup.moshi:moshi-kotlin:1.14.0"
+
+    //Glide Image from Url
+    implementation 'com.github.bumptech.glide:glide:4.14.2'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.14.2'
+
+    //ViewModel Scope
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1'
 
 }
